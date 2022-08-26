@@ -1,0 +1,73 @@
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    margin: 20px 100px;
+    outline: 1px solid red;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header__logo-container {}
+
+.header__logo-1 {
+    font-family: 'BIP';
+    font-size: 81px;
+    text-transform: uppercase;
+    color: #55974d;
+}
+
+.header__logo-2 {
+    font-family: 'BIP';
+    font-size: 81px;
+    text-transform: uppercase;
+    color: #d67e2a;
+}
+
+.header__text {
+    font-family: 'Muller';
+    font-size: 25.79px;
+    line-height: 23.46px;
+    font-weight: normal;
+    margin: 10px 0 0;
+}
+
+.header__contakts-container {
+    outline: 1px solid red;
+    display: flex;
+}
+
+.header__ppp {
+    margin-right: 50px;
+}
+
+.header__logopedia {
+    font-family: 'Muller';
+    font-size: 34.5px;
+    line-height: 38.5px;
+    font-weight: bold;
+    color: #55974d;
+}
+
+.header__logoped-contakts {}
+
+.header__scool {
+    font-family: 'Muller';
+    font-size: 34.5px;
+    line-height: 38.5px;
+    font-weight: bold;
+    color: #d67e2a;
+}
+
+.header__scool-contakts {}
+
+.header__nav{
+
+}
+
+.header__nav-link {
+
+}

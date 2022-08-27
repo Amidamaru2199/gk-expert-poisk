@@ -5,25 +5,24 @@
 }
 
 .header {
-    margin: 20px 100px;
+    margin: 20px 0px;
     display: flex;
     width: 100%;
     flex-direction: column;
-    max-width: 1700px;
 }
 
 .header__position-container {
     display: flex;
     justify-content: space-between;
+    margin: 0 100px;
 }
-
-.header__logo-container {}
 
 .header__logo-1 {
     font-family: 'BIP';
     font-size: 81px;
     text-transform: uppercase;
     color: #55974d;
+    margin-right: 5px;
 }
 
 .header__logo-2 {
@@ -35,8 +34,8 @@
 
 .header__text {
     font-family: 'Muller';
-    font-size: 25.79px;
-    line-height: 23.46px;
+    font-size: 26px;
+    line-height: 25px;
     font-weight: normal;
     margin: 10px 0 0;
 }
@@ -46,15 +45,11 @@
 }
 
 .header__ppp {
-    margin-right: 50px;
+    margin-right: 45px;
 }
 
 .header__logopedia {
     font-family: 'Muller';
-    /*font-size: 34.5px;
-    line-height: 38.5px;
-    font-weight: bold;
-    color: #55974d;*/
     text-transform: uppercase;
     color: #55974d;
     font-size: 33px;
@@ -62,13 +57,15 @@
     letter-spacing: 0.7px;
 }
 
-.header__logoped-contakts {}
+.header__logoped-contakts {
+    font-family: 'Muller';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: normal;
+}
 
 .header__scool {
     font-family: 'Muller';
-    /*font-size: 34.5px;
-    line-height: 38.5px;
-    font-weight: bold;*/
     text-transform: uppercase;
     font-size: 33px;
     font-weight: bolder;
@@ -76,13 +73,18 @@
     color: #d67e2a;
 }
 
-.header__scool-contakts {}
+.header__scool-contakts {
+    font-family: 'Muller';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: normal;
+}
 
 .header__nav {
     max-width: 1180px;
     display: flex;
     justify-content: space-between;
-    margin: 30px 0 0;
+    margin: 40px 100px 0;
 }
 
 .header__nav-link {
@@ -91,44 +93,168 @@
     line-height: 36.5px;
     font-weight: normal;
     cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
 
-    /*border: 5px solid red;
-    background-color: red;
-    border-radius: 15px*/
+.header__nav-link:nth-child(3) {
+    border: 1px solid #d67e2a;
+    background-color: #d67e2a;
+    border-radius: 20px;
+    padding: 2px 8px 0px;
+    color: #ffffff;
 }
 
 .content {
     width: 100%;
 }
 
-.picture {
-    background-image: url(./image/background-slide1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+.all {
+    position: relative;
+}
+
+.window {
+    background-image: url(./image/orangeokno.png);
+    width: 757px;
+    height: 405px;
+    position: absolute;
+    z-index: 2;
+    right: 100px;
+    bottom: 55px;
+}
+
+.window__title {
+    font-family: 'Muller';
+    font-size: 53px;
+    line-height: 55px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 28px 0px 0px 80px;
+    color: #ffffff;
+}
+
+.window__text {
+    font-family: 'Muller';
+    font-size: 33px;
+    line-height: 37px;
+    font-weight: normal;
+    margin: 6px 0px 0px 80px;
+    max-width: 640px;
+    color: #ffffff;
+}
+
+#slider {
+    position: relative;
+    text-align: center;
+    top: 10px;
+}
+
+#slider {
+    margin: 0 auto;
+}
+
+#slides article {
+    width: 20%;
+    float: left;
+}
+
+#slides .image {
+    width: 500%;
+    line-height: 0;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+article img {
     width: 100%;
 }
 
+label,
+a {
+    cursor: pointer;
+}
 
+.all input {
+    display: none;
+}
 
+#switch1:checked~#slides .image {
+    margin-left: 0;
+}
 
+#switch2:checked~#slides .image {
+    margin-left: -100%;
+}
 
+#switch3:checked~#slides .image {
+    margin-left: -200%;
+}
 
+#switch4:checked~#slides .image {
+    margin-left: -300%;
+}
+
+#switch5:checked~#slides .image {
+    margin-left: -400%;
+}
+
+#controls {
+    margin: -25% 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+
+#active label {
+    border-radius: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #bbb;
+}
+
+#active {
+    margin: 23% 0 0;
+    text-align: center;
+}
+
+#active label:hover {
+    background: #e6b27f;
+    border-color: #777 !important;
+}
+
+#switch1:checked~#active label:nth-child(1),
+#switch2:checked~#active label:nth-child(2),
+#switch3:checked~#active label:nth-child(3) {
+    background: #d67e2a;
+    border-color: #d67e2a !important;
+}
+
+#slides .image {
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover {
+    opacity: 0.6;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+}
 
 .services {
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
-    margin-bottom: 200px;
+    margin: 0 162px 200px
 }
 
 .services__position-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1700px
 }
 
 .services__title {
@@ -136,6 +262,8 @@
     font-size: 50px;
     line-height: 55px;
     font-weight: normal;
+    text-transform: uppercase;
+    margin: 45px 0;
 }
 
 .services__card {
@@ -146,8 +274,6 @@
     align-items: center;
 }
 
-.services__card-icon {}
-
 .services__card-name {
     font-family: 'Muller';
     font-size: 30px;
@@ -156,12 +282,8 @@
     text-align: center;
 }
 
-
-
-
 .directions {
-    max-width: 1700px;
-    margin: 100px auto;
+    margin: 200px 162px 103px;
     position: relative;
 }
 
@@ -169,13 +291,14 @@
     width: 640px;
     height: 640px;
     margin-right: 100px;
-    margin-left: 60px;
+    /*margin-left: 60px;*/
 }
 
 .directions__school-img {
     width: 730px;
     height: 543px;
     margin-left: 100px;
+    margin-top: 280px;
 }
 
 .directions__logoped-title {
@@ -183,7 +306,8 @@
     font-size: 82px;
     line-height: 47px;
     font-weight: bold;
-    margin: 0 0 40px;
+    margin: 13px 0 40px;
+    color: #55974d;
 }
 
 .directions__logoped-description {
@@ -202,10 +326,21 @@
     font-size: 45px;
     line-height: 55px;
     font-weight: normal;
+    text-decoration: none;
+    color: #ffff;
+    border: 1px solid #55974d;
+    background: #55974d;
+    border-radius: 30px;
+    padding: 8px 25px 7px 25px;
+    cursor: pointer;
 }
 
 .directions__school {
     display: flex;
+}
+
+.directions__school-text {
+    margin-left: 53px;
 }
 
 .directions__lschool-title {
@@ -213,6 +348,8 @@
     font-size: 82px;
     line-height: 90px;
     font-weight: bold;
+    color: #d67e2a;
+    margin: 280px 0 40px;
 }
 
 .directions__school-description {
@@ -220,6 +357,7 @@
     font-size: 35px;
     line-height: 40px;
     font-weight: normal;
+    margin: 0 0 35px;
 }
 
 .directions__school-link {
@@ -227,63 +365,77 @@
     font-size: 45px;
     line-height: 55px;
     font-weight: normal;
+    text-decoration: none;
+    color: #ffff;
+    border: 1px solid #d67e2a;
+    background: #d67e2a;
+    border-radius: 30px;
+    padding: 8px 25px 7px 25px;
+    cursor: pointer;
 }
-
-
-
-
-
 
 .directions__house {
     position: absolute;
+    left: -162px;
+    bottom: 110px;
+    z-index: -1;
 }
 
 .directions__tail {
     position: absolute;
+    left: -162px;
+    z-index: -1;
 }
 
 .directions__kit {
     position: absolute;
-    right: -103px;
+    right: -162px;
     top: 263px;
+    z-index: -1;
 }
 
 .directions__ship {
     position: absolute;
     top: 546px;
-    left: 542px;
+    left: 472px;
 }
 
 .directions__mouse {
+    z-index: -1;
     position: absolute;
+    right: 190px;
+    bottom: 571px;
 }
 
 .directions__cloud {
     position: absolute;
+    right: -162px;
+    bottom: -90px;
 }
 
-
-
 .work-plan {
-    max-width: 1700px;
+    hmax-width: 1700px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 162px;
 }
 
 .work-plan__position-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .work-plan__title {
-    font-size: 38px;
+    font-size: 50px;
     font-family: "Muller";
     color: rgb(0, 0, 0);
     text-transform: uppercase;
-    line-height: 1.106;
+    line-height: 55px;
+    margin: 0 0 65px;
+    font-weight: normal;
 }
 
 .work-plan__stage {
@@ -294,7 +446,7 @@
 .work-plan__number {
     font-size: 114px;
     font-family: "BIP";
-    color: #55974d;
+    color: #009846;
     text-transform: uppercase;
     line-height: 1.106;
     font-weight: 800;
@@ -304,7 +456,7 @@
 .work-plan__degree {
     font-size: 38px;
     font-family: "Muller";
-    color: #55974d;
+    color: #009846;
     text-transform: uppercase;
     line-height: 1.106;
     font-weight: 800;
@@ -314,10 +466,9 @@
 .work-plan__image {
     width: 260px;
     height: 64px;
-    margin-right: 40px;
+    margin-right: 20px;
 
 }
-
 
 .recommendations {
     width: 100%;
@@ -325,10 +476,8 @@
     flex-direction: column;
 }
 
-
-
 .recommendations__title {
-    margin: 0 auto;
+    margin: 100px auto 55px;
     font-family: 'Muller';
     font-size: 50px;
     line-height: 55px;
@@ -343,7 +492,7 @@
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
-    max-width: 470px;
+    max-width: 475px;
 }
 
 .recommendations__card-text {
@@ -354,6 +503,10 @@
     text-align: center;
     max-width: 480px;
     color: #ffffff;
+}
+
+.recommendations__card-image:first-of-type {
+    height: 360.88px;
 }
 
 .recommendations__card-link {
@@ -385,10 +538,8 @@
     background-color: #55974d;
 }
 
-
 .about-the-center {
-    max-width: 1700px;
-    margin: 0 auto;
+    margin: 0 80px
 }
 
 .about-the-center__title {
@@ -397,8 +548,9 @@
     line-height: 55px;
     font-weight: normal;
     text-align: center;
-    margin-top: 0;
-    padding-top: 50px;
+    margin: 0;
+    padding-top: 55px;
+    padding-bottom: 30px;
 }
 
 .about-the-center__text {
@@ -407,8 +559,8 @@
     line-height: 33px;
     font-weight: normal;
     text-align: center;
+    margin: 0;
 }
-
 
 .consultation {
     height: 100vh;
@@ -423,8 +575,8 @@
     line-height: 55px;
     font-weight: normal;
     text-align: center;
+    margin: 65px 0 0;
 }
-
 
 .background-image {
     background-image: url(./image/fon.png);
@@ -441,8 +593,8 @@
     border-radius: 20px;
     height: 521px;
     position: absolute;
-    right: 200px;
-    top: 400px;
+    right: 180px;
+    top: 265px
 }
 
 .consultation__form-input {
@@ -468,4 +620,135 @@
     font-weight: normal;
     color: #ffff;
     padding: 12px 0;
+}
+
+.maps {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1750px;
+    justify-content: space-between;
+    padding-top: 100px
+}
+
+.maps__location {
+    display: flex;
+    flex-direction: column;
+}
+
+.maps__sсhool {
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 39px;
+    font-weight: bold;
+    color: #d67e2a;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.maps__logoped {
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 39px;
+    font-weight: bold;
+    color: #55974d;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.maps__address {
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+.footer {
+    display: flex;
+    margin: 100px 80px 92px
+}
+
+.footer__address {
+    font-family: 'Muller';
+    font-size: 38px;
+    line-height: 52px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer__school-tel {
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: bold;
+    color: #d67e2a;
+    margin: 0 0 33px;
+}
+
+.footer__logoped-tel {
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: bold;
+    color: #55974d;
+    margin: 0;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    margin-right: 65px;
+}
+
+.footer__link {
+    font-family: 'Muller';
+    font-size: 38px;
+    line-height: 42px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer__logo-1 {
+    font-family: 'BIP';
+    font-size: 81px;
+    text-transform: uppercase;
+    color: #55974d;
+    margin-right: 5px;
+}
+
+.footer__logo-2 {
+    font-family: 'BIP';
+    font-size: 81px;
+    text-transform: uppercase;
+    color: #d67e2a;
+}
+
+.footer__text {
+    font-family: 'Muller';
+    font-size: 25px;
+    line-height: 23px;
+    font-weight: normal;
+    margin: 7px 0 18px;
+}
+
+.footer__email {
+    font-family: 'Muller';
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer__work-schedule {
+    font-family: 'Muller';
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer__contacts {
+    margin-right: 65px;
 }

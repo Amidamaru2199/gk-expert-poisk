@@ -1,13 +1,19 @@
 .page {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .header {
     margin: 20px 100px;
-    outline: 1px solid red;
     display: flex;
     width: 100%;
+    flex-direction: column;
+    max-width: 1700px;
+}
+
+.header__position-container {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -36,7 +42,6 @@
 }
 
 .header__contakts-container {
-    outline: 1px solid red;
     display: flex;
 }
 
@@ -46,28 +51,421 @@
 
 .header__logopedia {
     font-family: 'Muller';
-    font-size: 34.5px;
+    /*font-size: 34.5px;
     line-height: 38.5px;
     font-weight: bold;
+    color: #55974d;*/
+    text-transform: uppercase;
     color: #55974d;
+    font-size: 33px;
+    font-weight: bolder;
+    letter-spacing: 0.7px;
 }
 
 .header__logoped-contakts {}
 
 .header__scool {
     font-family: 'Muller';
-    font-size: 34.5px;
+    /*font-size: 34.5px;
     line-height: 38.5px;
-    font-weight: bold;
+    font-weight: bold;*/
+    text-transform: uppercase;
+    font-size: 33px;
+    font-weight: bolder;
+    letter-spacing: 0.7px;
     color: #d67e2a;
 }
 
 .header__scool-contakts {}
 
-.header__nav{
-
+.header__nav {
+    max-width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0;
 }
 
 .header__nav-link {
+    font-family: 'Muller';
+    font-size: 40px;
+    line-height: 36.5px;
+    font-weight: normal;
+    cursor: pointer;
 
+    /*border: 5px solid red;
+    background-color: red;
+    border-radius: 15px*/
+}
+
+.content {
+    width: 100%;
+}
+
+.picture {
+    background-image: url(./image/background-slide1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.services {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.services__position-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1700px
+}
+
+.services__title {
+    font-family: 'Muller';
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: normal;
+}
+
+.services__card {
+    display: flex;
+    flex-direction: column;
+    width: 165px;
+    height: 165px;
+    align-items: center;
+}
+
+.services__card-icon {}
+
+.services__card-name {
+    font-family: 'Muller';
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+
+
+.directions {
+    max-width: 1700px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.directions__logoped-img {
+    width: 640px;
+    height: 640px;
+    margin-right: 100px;
+    margin-left: 60px;
+}
+
+.directions__school-img {
+    width: 730px;
+    height: 543px;
+    margin-left: 100px;
+}
+
+.directions__logoped-title {
+    font-family: 'Muller';
+    font-size: 82px;
+    line-height: 47px;
+    font-weight: bold;
+    margin: 0 0 40px;
+}
+
+.directions__logoped-description {
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.directions__logoped {
+    display: flex;
+}
+
+.directions__logoped-link {
+    font-family: 'Muller';
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: normal;
+}
+
+.directions__school {
+    display: flex;
+}
+
+.directions__lschool-title {
+    font-family: 'Muller';
+    font-size: 82px;
+    line-height: 90px;
+    font-weight: bold;
+}
+
+.directions__school-description {
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.directions__school-link {
+    font-family: 'Muller';
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: normal;
+}
+
+
+
+
+
+
+.directions__house {
+    position: absolute;
+}
+
+.directions__tail {
+    position: absolute;
+}
+
+.directions__kit {
+    position: absolute;
+    right: -103px;
+    top: 263px;
+}
+
+.directions__ship {
+    position: absolute;
+    top: 546px;
+    left: 542px;
+}
+
+.directions__mouse {
+    position: absolute;
+}
+
+.directions__cloud {
+    position: absolute;
+}
+
+
+
+.work-plan {
+    max-width: 1700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-plan__position-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work-plan__title {
+    font-size: 38px;
+    font-family: "Muller";
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1.106;
+}
+
+.work-plan__stage {
+    display: flex;
+    align-items: center
+}
+
+.work-plan__number {
+    font-size: 114px;
+    font-family: "BIP";
+    color: #55974d;
+    text-transform: uppercase;
+    line-height: 1.106;
+    font-weight: 800;
+    margin-right: 40px;
+}
+
+.work-plan__degree {
+    font-size: 38px;
+    font-family: "Muller";
+    color: #55974d;
+    text-transform: uppercase;
+    line-height: 1.106;
+    font-weight: 800;
+    margin-right: 40px;
+}
+
+.work-plan__image {
+    width: 260px;
+    height: 64px;
+    margin-right: 40px;
+
+}
+
+
+.recommendations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.recommendations__title {
+    margin: 0 auto;
+    font-family: 'Muller';
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: normal;
+}
+
+.recommendations__card-title {
+    font-family: 'Muller';
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    max-width: 470px;
+}
+
+.recommendations__card-text {
+    font-family: 'Muller';
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: normal;
+    text-align: center;
+    max-width: 480px;
+    color: #ffffff;
+}
+
+.recommendations__card-link {
+    font-family: 'Muller';
+    font-size: 40px;
+    line-height: 55px;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    padding: 0 7px;
+}
+
+.recommendations__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.recommendations__card {
+    background-color: #d67e2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 45px;
+}
+
+.recommendations__card:nth-child(2) {
+    background-color: #55974d;
+}
+
+
+.about-the-center {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.about-the-center__title {
+    font-family: 'Muller';
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+.about-the-center__text {
+    font-family: 'Muller';
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.consultation {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.consultation__title {
+    font-family: 'Muller';
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.background-image {
+    background-image: url(./image/fon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -562px
+}
+
+.consultation__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    background-color: #d67e2a;
+    border-radius: 20px;
+    height: 521px;
+    position: absolute;
+    right: 200px;
+    top: 400px;
+}
+
+.consultation__form-input {
+    width: 406px;
+    margin: 55px 55px 0;
+    border: 0;
+    border-radius: 30px;
+    padding: 10px 12px;
+    font-family: 'Muller';
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.consultation__form-button {
+    margin: 55px 55px;
+    background-color: transparent;
+    border: 2px solid #ffff;
+    border-radius: 30px;
+    font-family: 'Muller';
+    font-size: 39px;
+    line-height: 40px;
+    font-weight: normal;
+    color: #ffff;
+    padding: 12px 0;
 }
